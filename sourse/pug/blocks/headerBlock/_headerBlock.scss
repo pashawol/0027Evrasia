@@ -89,7 +89,7 @@
 		}
 		&:nth-child(6) {
 				@include media-breakpoint-down(md) {
-					display: none;
+					// display: none;
 				}
 			--top: -16px;
 			// --left: 16px;

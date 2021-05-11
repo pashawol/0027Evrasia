@@ -9,13 +9,13 @@ mixin sForm()
 			+form-wrap
 				.row
 					.col-lg-5
-						+input('Ваше имя',,'text','name')
+						+input('Ваше имя','text','', 'name')
 						+input('Номер телефона','tel')
 						+input('E-mail','email')
 					.col-lg-7.mb-4
 						+input('Ваш вопрос','textarea')
 					.col-lg-5.mb-4
-						.button.btn.btn-outline-body.w-100(type="submit") Отправить
+						button.btn.btn-outline-body.w-100(type="submit") Отправить
 					.col.align-self-center.mb-4
 						+polite
 	// end sForm
