@@ -2,8 +2,20 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+b.section-title
+				h2 Остались вопросы?
+				.h4 Задайте их&nbsp;нам и&nbsp;мы&nbsp;ответим Вам в&nbsp;кратчайшие сроки
+			
+			+form-wrap
+				.row
+					.col-lg-5
+						+input('Ваше имя')
+						+input('Номер телефона','tel')
+						+input('E-mail','email')
+					.col-lg-7.mb-4
+						+input('Ваш вопрос','textarea')
+					.col-lg-5.mb-4
+						.button.btn.btn-outline-body.w-100(type="submit") Отправить
+					.col.align-self-center.mb-4
+						+polite
 	// end sForm

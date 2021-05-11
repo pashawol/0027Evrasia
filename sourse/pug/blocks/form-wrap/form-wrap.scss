@@ -1,11 +1,14 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(10);
 		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
+		border-left: none;
+		border-top: none;
+		border-right: none;
 		 resize: none;
  	}
  	&__btn{
@@ -15,6 +18,19 @@
  		width: 100%;
  		display: block;
  	}
+	 textarea{
+		 height: rem(270);
+	 }
+	 &__polite{
+		 max-width: rem(450);
+		 font-weight: 500;
+		 @include rfs(24px);
+		 a{
+			 @extend .text-body;
+			 @extend .tdu;
+			 display: inline-block;
+		 }
+	 }
 }
 
 

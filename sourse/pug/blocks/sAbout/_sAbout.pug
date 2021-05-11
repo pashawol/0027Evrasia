@@ -1,0 +1,21 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.sAbout.section#sAbout&attributes(attributes)
+
+	
+		
+		.container
+			.row
+				mixin item(i,t,p)
+					+e.col.col-md-6
+						+e.item
+							+e.img-wrap 
+								+pic(`about-${i}.jpg`,'bg', 0)
+							+e.caption
+								+e.title!= t
+								+e.text!= p
+				+item(`1`,`Встречаемся  лично`,`оффлайн форум`)
+				+item(`2`,`Транслируем в&nbsp;мир`,`Онлайн трансляции`)
+			p &laquo;Евразия Global&raquo;&nbsp;&mdash; площадка практико- ориентированного #[span диалога] молодежи России  и&nbsp;иностранных государств. Форум проводится  в&nbsp;#[span 6&nbsp;раз] и&nbsp;за&nbsp;всю свою историю объединил более  #[span 4000 молодых людей] со&nbsp;всего мира!
+				
+	// end sAbout

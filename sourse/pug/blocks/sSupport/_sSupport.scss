@@ -1,0 +1,42 @@
+// start .sSupport
+.sSupport {
+		--sPT: #{rem(400)};
+		margin-top: -300px;
+			@include media-breakpoint-up(md) {
+				--sPB:#{rem(300)} ;
+			}
+			--sPB:#{rem(250)} ;
+		// --sTPB: ;
+		background-image: url(../img/svg/bg-dark-2.svg);
+		color: #fff;
+		.row{
+			@include rfs(40px);
+			font-weight: 600;
+			align-items: center;
+			margin-bottom: rem(100);
+		}
+		&__col{
+
+			text-align: center;
+			@include media-breakpoint-up(md) {
+
+				width: calc(#{rem(368)}  + var(--bs-gutter-x));
+				margin-bottom: 0;
+			}
+			margin-bottom: 2rem;
+			img{
+				@extend .res-i;
+			}
+		}
+		&__text{
+			max-width: rem(830);
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSupport

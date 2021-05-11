@@ -1,0 +1,26 @@
+// start .sOrganizers
+.sOrganizers {
+		--sPT: 0;
+		@include media-breakpoint-up(sm) {
+			--sPB: 0;
+
+			--sTPB: #{rem(100)};
+		}
+		margin-top: -100px;
+
+		.row{
+				// justify-content: space-between;
+				justify-content: space-around;
+				align-items: center;
+				> * {
+					margin-bottom: rem(60);
+				}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOrganizers

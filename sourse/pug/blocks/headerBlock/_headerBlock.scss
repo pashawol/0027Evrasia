@@ -1,19 +1,129 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+	// background-color: $primary;
+	z-index: 4;
+	padding-bottom: rem(200);
+	position: relative;
+	&::before{
+			@include media-breakpoint-up(sm) {
 
-	h1 {
-		margin-bottom: 1px;
+				content: url(../img/svg/head-before.svg);
+				position: absolute;
+			}
+
+		right: -200px;
+			@include media-breakpoint-up(xl) {
+
+				top: 0;
+			}
+			top: 50%;
+
 	}
+	&__col--text{
+			@include media-breakpoint-up(sm) {
 
-	h2 {
-		margin-bottom: 1px;
+				margin-bottom: rem(70);
+			}
+		font-weight: 600;
 	}
+	&__title{
+		@extend .h1;
+		align-items: center;
+		line-height: 1.2;
+		img{
+			// max-height: 1em;
+			// width: auto;
+		}
+		@include media-breakpoint-up(xxxl) { 
+			--bs-gutter-x: 38px; 
+		}
+	}
+	&__col{
+			@include media-breakpoint-up(sm) {
 
+				margin-bottom: rem(45);
+			}
+		max-width: 100%;
+	}
+	p{
+		display: block;
+	}
+	&__img-wrap{
+		z-index: 2;
+		display: block;
+		// position: absolute;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			top: var(--top, 16px);
+			left: var(--left, -16px);
+			background-color: #fff;
+		}
+	}	
+	&__col--img{
+			@include media-breakpoint-down(md) {
+				order: 1;
+				margin-bottom: 2rem;
+				// display: none;
+			}
+	}
+	&__col{
+		&:nth-child(2){
+						@include media-breakpoint-down(md) {
+					display: none;
+				}
+		}
+		&:nth-child(3),
+		&:nth-child(5){
+			--top: -16px;
+			--left: 16px;
+						@include media-breakpoint-down(sm) {
+					display: none;
+				}
+		}
+		&:nth-child(6) {
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			--top: -16px;
+			// --left: 16px;
+		}
+	}
+	&__col--small{
+		max-width: calc(402px + var(--bs-gutter-x));
+		font-weight: 500;
+		font-size: var(--fontSizeBase, 16px);
+		@include media-breakpoint-down(sm) {
+			// display: none;
+			margin-bottom: 1rem;
+		}
+	}
+	
+	
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline-body;
+		
+		width: 100%;
+		max-width: rem(480);
+		margin-bottom: rem(10);
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__body{
+		align-items: center;
+		@include media-breakpoint-up(xxxl) {
+			--bs-gutter-x: 64px;
+		}
+	}
+	
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

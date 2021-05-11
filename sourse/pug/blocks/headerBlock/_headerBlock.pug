@@ -2,9 +2,23 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			+e.title.row
+				+e.col--text.col-sm-auto Международный
 
-			.row
-						
+				+e.col--img.col-auto
+					+e.img-wrap: +pic("head-1.jpg",'',0)
+				+e.col--img.col-auto
+					+e.img-wrap: +pic("head-2.jpg",'',0)
+				+e.col--text.col-sm-auto молодежный
+				+e.col--img.col-auto
+					+e.img-wrap: +pic("head-3.jpg",'',0)
+				+e.col--text.col-sm-auto форум
+				+e.col--img.col-auto
+					+e.img-wrap: +pic("head-4.jpg",'',0)
+				+e.col--text.col-sm-auto Евразия Global
+				+e.col--small.col-auto Форум, который объединяет молодежь со&nbsp;всего мира. Говорим на&nbsp;двух языках: русском и&nbsp;английском
+			+e.body.row.text-center
+				.col-sm-auto
+					+e.btn(href="#") Зарегистрироваться
+				.h4.col-sm-auto 2 — 8 сентября, Оренбург
 	// end headerBlock

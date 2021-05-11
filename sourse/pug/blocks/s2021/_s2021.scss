@@ -1,0 +1,39 @@
+// start .s2021
+.s2021 {
+	position: relative;
+	z-index: 3;
+	@include media-breakpoint-up(xxxl) {
+
+		--sPT: 0;
+	}
+
+	.col{
+		position: relative;
+	}
+		picture{
+			// left: 0;
+			// right: 0;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(xl) {
+				--gutter: 5;
+			}
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				top: 0;
+
+				--left: calc(var(--gutter, 6) / 12 * 100% + var(--bs-gutter-x));
+				left: var(--left);
+				width: calc(100% +  (100vw - var(--left)) / 2);
+			}
+		}
+		// --sPB: ;
+		// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.s2021

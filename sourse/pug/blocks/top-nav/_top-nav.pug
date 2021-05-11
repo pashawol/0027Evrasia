@@ -9,7 +9,7 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js.on
+		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
@@ -21,10 +21,16 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
+				.col-lg-auto.col 
+					a(href="/")
+						+logo()
+				
+				.col-lg.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					a.btn.btn-outline-body(href="#") Ru
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
 					
 	// end top-nav
