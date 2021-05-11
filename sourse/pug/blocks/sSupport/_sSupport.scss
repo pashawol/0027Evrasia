@@ -2,6 +2,11 @@
 .sSupport {
 		--sPT: #{rem(400)};
 		margin-top: -300px;
+		a{
+			&:hover{
+				opacity: 0.7;
+			}
+		}
 			@include media-breakpoint-up(md) {
 				--sPB:#{rem(300)} ;
 			}

@@ -110,8 +110,8 @@
 		@extend .btn;
 		@extend .btn-outline-body;
 		
-		width: 100%;
-		max-width: rem(480);
+		width: rem(480);
+		max-width: 100%;
 		margin-bottom: rem(10);
 		@include media-breakpoint-down(sm) {
 			margin-bottom: rem(20);

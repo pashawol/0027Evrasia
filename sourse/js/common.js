@@ -15,7 +15,7 @@ const JSCCommon = {
 
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".menu a")),
 
 	modalCall() {
 		const link = ".link-modal-js";
@@ -102,7 +102,7 @@ const JSCCommon = {
 		this.toggleMenu();
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".navMenu__link"); // (1)
+			let link = event.target.closest(".menu a"); // (1)
 			if (!container || link) this.closeMenu();
 		}, { passive: true });
 
