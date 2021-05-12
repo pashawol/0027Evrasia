@@ -12,17 +12,17 @@
 			@extend .col-md-6;
 			list-style: none;
 			font-weight: 500;
-			@include rfs(32px);
+			@include rfs(28px); 
 		}
 		&__li-inner{
-			padding: rem(45) rem(38);
+			padding: em(35) em(28);
 			padding-right: rem(50);
 			background-color: #000;
-			color: #fff;
-			min-height: calc(100% - 30px);
+			color: #fff; 
 			margin-bottom: 30px;
 			position: relative;
 			min-height: rem(450);
+			height: calc(100% - 30px);
 			z-index: 2;
 			&::after {
 			content: counter(num);

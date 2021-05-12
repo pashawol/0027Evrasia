@@ -6,7 +6,7 @@ mixin sPlatforms(data)
 				h2 Партнерские площадки 
 				
 			+e.row.row
-				.col
+				.col-sm
 					p 
 						span Проектные офисы международного молодежного сотрудничества  по&nbsp;направлениям:
 					+e.row-sm.row
@@ -16,7 +16,7 @@ mixin sPlatforms(data)
 						+e.col.col-6 
 							+e.place Россия
 							+e.text БРИКС
-					+e.row-sm.row
+					+e.row-sm.row.pb-sm-0.pb-3
 						+e.col.col-6 
 							+e.place Россия
 							+e.text Организация  исламского  сотрудничества
@@ -24,13 +24,13 @@ mixin sPlatforms(data)
 							+e.place Россия
 							+e.text Центрально-Азиатский регион
 
-				.col.order-md-last
+				.col-sm.order-md-last
 					p 
-						span Росийско <br> -Сербский молодежный <br> диалог
+						span Росийско-Сербский молодежный  диалог
 					p 
 						span Год  креативной  экономики
 					p 
-						span Сообщество <br> молодых соотечественников, проживающих  за&nbsp;рубежом
-				.col-auto
+						span Сообщество  молодых соотечественников, проживающих  за&nbsp;рубежом
+				.col-md-auto
 					+pic('platform-img.jpg','',0)
 	// end sPlatforms

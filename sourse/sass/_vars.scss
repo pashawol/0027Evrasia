@@ -1,10 +1,10 @@
-$em-base: 20px;
+$em-base: 20;
 $small: rem(14);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
-$rfs-breakpoint: 1200px !default;
-$rfs-rem-value: 20 !default;
+$rfs-breakpoint: 1400px !default;
+$rfs-rem-value: $em-base !default;
 
 $themeColor: $primary !default;
 $colors: (
