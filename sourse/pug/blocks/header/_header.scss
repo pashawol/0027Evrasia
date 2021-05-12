@@ -3,7 +3,7 @@
 	.header {
 		position: relative;
 		 	&::before{
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(lg) {
 
 				content: url(../img/svg/head-before.svg);
 				position: absolute;

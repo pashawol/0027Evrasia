@@ -24,12 +24,14 @@
 
 
 		transform: translate(10%,-20%);
-		&::after{
-			content: url(../img/svg/head-bg.svg);
-			position: absolute;
-			right: 10%;
-			top: 85%;
-		}
+		
+
+				&::after{
+					content: url(../img/svg/head-bg.svg);
+					position: absolute;
+					right: 10%;
+					top: 85%;
+				} 
 	}
 
 	&__col--text{
