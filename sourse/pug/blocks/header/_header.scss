@@ -1,7 +1,24 @@
 
 	// start .header
 	.header {
-		 
+		position: relative;
+		 	&::before{
+			@include media-breakpoint-up(sm) {
+
+				content: url(../img/svg/head-before.svg);
+				position: absolute;
+			}
+
+		// right: 300px;
+		left: 55%;
+			@include media-breakpoint-up(xl) {
+
+				// top: -100%;
+				bottom:0%;
+			}
+			// top: -50%;
+
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
