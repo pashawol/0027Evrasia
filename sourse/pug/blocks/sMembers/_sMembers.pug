@@ -3,13 +3,13 @@ mixin sMembers(data)
 	+b.SECTION.sMembers#sMembers&attributes(attributes)
 		.container.section
 			.row
-				.col-lg-6
+				.col-lg-6(class="wow  animate__fadeInUp  " )
 					+b.section-title
 						h2 Участники  форума
 						+pic("member.jpg",'',0).img-man
 						+e.tickets
 							+pic("tickets.png",'',0)
-				.col
+				.col(class="wow  animate__fadeIn  " )
 					+e.title Молодежь от 18 до 30 лет:
 					ul
 						li Представители иностранной молодежи, заинтересованные в&nbsp;активном взаимодействии  с&nbsp;российской молодежью по&nbsp;различным  направлениям сотрудничества.

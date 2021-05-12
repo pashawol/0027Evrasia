@@ -2,17 +2,17 @@ mixin sSupport(data)
 	// start sSupport
 	+b.SECTION.sSupport.section#sSupport&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(class="wow  animate__fadeIn  " )
 				h2 Грантовая поддержка участников
 				
-			.row
+			.row(class="wow  animate__fadeIn  " )
 				+e.col.col-md-auto.order-md-last.text-center
 					a(href="https://grants.myrosmol.ru/auth/login" target="_blank"): img(src="img/svg/support-1.svg", alt="")
 				.col 
 					+e.text Грантовый конкурс молодежных инициатив для российских участников
 					
 					
-			.row
+			.row(class="wow  animate__fadeIn  " )
 				+e.col.col-md-auto.order-md-last.text-center
 					a(href="https://gorchakovfund.ru" target="_blank"): img(src="img/svg/support-2.svg", alt="")
 				.col 

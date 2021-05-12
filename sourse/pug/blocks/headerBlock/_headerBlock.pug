@@ -2,7 +2,7 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.title.row
+			+e.title.row(class="wow  animate__fadeInLeft  " )
 				+e.col--text.col-sm-auto Международный
 
 				+e.col--img.col-auto
@@ -19,6 +19,6 @@ mixin headerBlock()
 				+e.col--small.col-auto Форум, который объединяет молодежь со&nbsp;всего мира. Говорим на&nbsp;двух языках: русском и&nbsp;английском
 			+e.body.row.text-center
 				.col-sm-auto
-					+e.btn(href="#modal-reg").link-modal-js Зарегистрироваться
-				.h4.col-sm-auto 2 — 8 сентября, Оренбург
+					+e.btn(href="#modal-reg" class="wow  animate__fadeInRight  " ).link-modal-js Зарегистрироваться
+				.h4.col-sm-auto(class="wow  animate__fadeInRight  " ) 2 — 8 сентября, Оренбург
 	// end headerBlock

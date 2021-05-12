@@ -2,12 +2,12 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(class="wow  animate__fadeInLeft  " )
 				h2 Остались вопросы?
 				.h4 Задайте их&nbsp;нам и&nbsp;мы&nbsp;ответим Вам в&nbsp;кратчайшие сроки
 			
 			+form-wrap
-				.row
+				.row(class="wow  animate__fadeInRight  " )
 					.col-lg-5
 						+input('Ваше имя','text','', 'name')
 						+input('Номер телефона','tel')

@@ -2,11 +2,11 @@ mixin sPlatforms(data)
 	// start sPlatforms
 	+b.SECTION.sPlatforms.section#sPlatforms&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(class="wow  animate__fadeInUp  " )
 				h2 Партнерские площадки 
 				
 			+e.row.row
-				.col-sm
+				.col-sm(class="wow  animate__fadeInLeft  " )
 					p 
 						span Проектные офисы международного молодежного сотрудничества  по&nbsp;направлениям:
 					+e.row-sm.row
@@ -24,13 +24,13 @@ mixin sPlatforms(data)
 							+e.place Россия
 							+e.text Центрально-Азиатский регион
 
-				.col-sm.order-md-last
+				.col-sm.order-md-last(class="wow  animate__fadeInRight  " )
 					p 
 						span Росийско-Сербский молодежный  диалог
 					p 
 						span Год  креативной  экономики
 					p 
 						span Сообщество  молодых соотечественников, проживающих  за&nbsp;рубежом
-				.col-md-auto
+				.col-md-auto(class="wow  animate__fadeIn  " )
 					+pic('platform-img.jpg','',0)
 	// end sPlatforms
