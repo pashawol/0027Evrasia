@@ -10,8 +10,19 @@
 	}
 	&__img-wrap{
 		position: absolute;
-		right: 0;
-		top: 10%;
+		@include media-breakpoint-up(xxl) {
+			
+			right: 0;
+				top: 10%;
+			} 
+			
+		@include media-breakpoint-up(xl) {
+			
+			right: -15%;
+				top: 0%;
+			} 
+
+
 		transform: translate(10%,-20%);
 		&::after{
 			content: url(../img/svg/head-bg.svg);
