@@ -1,16 +1,16 @@
-$em-base: 20;
+$em-base: 20px;
 $small: rem(14);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
 $rfs-breakpoint: 1400px !default;
-$rfs-rem-value: $em-base !default;
+$rfs-rem-value: 20 !default;
 
-$themeColor: $primary !default;
-$colors: (
-  'white': #ffffff,
-  'black': $body-color,
-) !default;
+// $themeColor: $primary !default;
+// $colors: (
+//   'white': #ffffff,
+//   'black': $body-color,
+// ) !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
