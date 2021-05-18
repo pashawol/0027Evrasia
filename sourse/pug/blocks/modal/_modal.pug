@@ -1,25 +1,25 @@
 
-mixin modal() 
+mixin modal(data) 
 	//  start modals
 
 	+b.modal-win--reg(id="modal-reg" class=" " style="display: none" )
-		.h2.fw-600.text-white Выберите тип участия 
+		.h2.fw-600.text-white= data.title
 		.row
 			.col-lg-6 
 				+e.card(href="https://grants.myrosmol.ru/events/96f7f736-8a50-4a99-88fc-ada1b00b4b38")
-					+e.DIV.title Участник  форума
-					+e.btn.btn.btn-outline-body(type="button") Зарегистрироваться
+					+e.DIV.title= data.t1
+					+e.btn.btn.btn-outline-body(type="button")= data.btn
 					+pic("type-1.png",'',0)
 			.col-lg-6 
 				+e.card(href="https://grants.myrosmol.ru/events/9efe94b8-d898-4f2c-b7e1-85867b1ac418")
-					+e.DIV.title Волонтер форума
-					+e.btn.btn.btn-outline-body(type="button") Зарегистрироваться
+					+e.DIV.title= data.t2
+					+e.btn.btn.btn-outline-body(type="button")= data.btn
 					+pic("type-2.png",'',0)
 
 	// #modal-reg
 	+b.modal-win--dark(id="modal-thanks" class=" " style="display: none" )
-		.h2.fw-600.text-white Спасибо за вопрос, 
-		.h4.text-white  вернемся с ответом в ближайшее время!
+		.h2.fw-600.text-white= th
+		.h4.text-white= thp
 
 
 	// #modal-reg

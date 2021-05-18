@@ -1,21 +1,20 @@
-mixin sForm()
+mixin sForm(data)
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			+b.section-title(class="wow  animate__fadeInLeft  " )
-				h2 Остались вопросы?
-				.h4 Задайте их&nbsp;нам и&nbsp;мы&nbsp;ответим Вам в&nbsp;кратчайшие сроки
+				block
 			
 			+form-wrap
 				.row(class="wow  animate__fadeInRight  " )
 					.col-lg-5
-						+input('Ваше имя','text','', 'name')
-						+input('Номер телефона','tel')
-						+input('E-mail','email')
+						+input(data.name,'text','', 'name')
+						+input(data.tel,'tel')
+						+input(data.email,'email')
 					.col-lg-7.mb-4
-						+input('Ваш вопрос','textarea')
+						+input(data.text,'textarea')
 					.col-lg-5.mb-4
-						button.btn.btn-outline-body.w-100(type="submit") Отправить
+						button.btn.btn-outline-body.w-100(type="submit")= data.btn
 					.col.align-self-center.mb-4
-						+polite
+						+e.polite!= data.policy
 	// end sForm

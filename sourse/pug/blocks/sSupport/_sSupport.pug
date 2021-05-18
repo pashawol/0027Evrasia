@@ -3,19 +3,19 @@ mixin sSupport(data)
 	+b.SECTION.sSupport.section#sSupport&attributes(attributes)
 		.container
 			+b.section-title(class="wow  animate__fadeIn  " )
-				h2 Грантовая поддержка участников
+				h2= data.title
 				
 			.row(class="wow  animate__fadeIn  " )
 				+e.col.col-md-auto.order-md-last.text-center
-					a(href="https://grants.myrosmol.ru/auth/login" target="_blank"): img(src="img/svg/support-1.svg", alt="")
+					a(href="https://grants.myrosmol.ru/auth/login" target="_blank"): img(src=`img/svg/${data.img}.svg`, alt="")
 				.col 
-					+e.text Грантовый конкурс молодежных инициатив для российских участников
+					+e.text= data.p
 					
 					
 			.row(class="wow  animate__fadeIn  " )
 				+e.col.col-md-auto.order-md-last.text-center
-					a(href="https://gorchakovfund.ru" target="_blank"): img(src="img/svg/support-2.svg", alt="")
+					a(href="https://gorchakovfund.ru" target="_blank"): img(src=`img/svg/${data.img2}.svg`, alt="")
 				.col 
-					+e.text Грантовый конкурс Фонда поддержки публичной дипломатии имени А.М.Горчакова  для иностранной молодежи
+					+e.text= data.p2
 
 	// end sSupport

@@ -1,0 +1,157 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sWe/_sWe.pug
+include ../blocks/s2021/_s2021.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sPrograms/_sPrograms.pug
+include ../blocks/sPlatforms/_sPlatforms.pug
+include ../blocks/sSupport/_sSupport.pug
+include ../blocks/sOrganizers/_sOrganizers.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	- let 
+
+block title
+	- let  title= 'The International Youth Forum “Eurasia Global”'
+	title= title
+	- let desc = "Forum that unites young people from all over the world.  We speak two languages: Russian and English"
+	meta(name="description", content= desc)
+	-
+		let nav = { 
+			link1: "About the Forum",
+			link2: "Participants",
+			link3: "Contact us",
+			}
+block pagecontent
+	+mob-mnu(nav)
+	.bg-primary
+		header.header
+			+top-nav(nav)
+				a.btn.btn-outline-body(href="/") Ru
+		+headerBlock({
+			title,
+			text: desc,
+			btn:` Participate`,
+			dat:`September 2-8, Orenburg`,
+		})
+		
+		.black-img-bg
+			
+			img.img-for-bg(src="img/svg/bg-dark.svg", alt="")
+			+sAbout({
+				title1:`Let’s meet in person`,
+				text1:`Offline forum`,
+				title2:`To stay online`,
+				text2:`Online Forum`,
+				text:`“Eurasia Global” is a platform for practically oriented <span>dialogue</span> between Russia and foreign countries. The Forum is held for the <span>6th time</span>, and throughout its history it united <span>4000 young people</span> from all over the world! 
+`
+			})
+			+sWe({
+				we: 'We',
+				y: ' 2021 '
+			})
+				li promote objective image of&nbsp;Russia among the foreign youth
+				li strengthen friendly and professional relations between Russian and foreign youth
+				li study the best practices of&nbsp;cooperation of&nbsp;youth associations
+				li develop joint projects
+		+s2021({
+			title: `International Year of&nbsp;Creative Economy for Sustainable Development`,
+			img: "img-2021-en.jpg"
+		})
+		+sMembers({h2: 'Forum participants'})
+			+e.title Youth aged 18 to 35: 
+			ul
+				li Foreign youth representatives, interested in&nbsp;active interaction with Russian youth in&nbsp;different areas of&nbsp;cooperation.  
+				li Young Russian Compatriots living abroad. 
+
+				li Young opinion leaders from Russia and foreign countries.
+
+				li Russian and foreign young specialists and professionals, working in the field of international youth cooperation.  
+
+				li Young people with a project idea or a completed project aimed at international cooperation
+		+sPrograms({
+			h2: `Business programme`,
+			btn: ` Participate`,
+			list: [
+				`Partnerships in education and competence development. New role of the human potential. `,
+				`Cooperation and youth entrepreneurial partnership`,
+				`From conscious consumption to sustainable development. Objectives and challenges for the young people who build the world for themselves and their descendants. `,
+				`Voice of the youth - modern media and communication means.`,
+			]
+		})
+		+sPlatforms({
+			h2: `Partner platforms`
+		})
+			.col-sm(class="wow  animate__fadeInLeft  " )
+				p 
+					span Project offices of&nbsp;international youth cooperation in&nbsp;the following areas:
+				+e.row-sm.row
+					+e.col.col-6 
+						+e.place Russia 
+						+e.text Arctic Council
+					+e.col.col-6 
+						+e.place Russia
+						+e.text BRICS
+				+e.row-sm.row.pb-sm-0.pb-3
+					+e.col.col-6 
+						+e.place Russia
+						+e.text Organisation of Islamic Cooperation
+					+e.col.col-6 
+						+e.place Russia
+						+e.text Central Asian Region
+
+			.col-sm.order-md-last(class="wow  animate__fadeInRight  " )
+				p 
+					span Russian-Serbian Youth Dialogue
+				p 
+					span Year of Creative Economy
+				p 
+					span Eurasian Economic Commission Youth Council
+				p 
+					span Community of the Young Compatriots Living Abroad
+		+sSupport({
+			title: 'Grant support ',
+			p:'Grant Contest of the Federal Agency for Youth Affairs For Russian participants of the Forum ',
+			img: `support-1`,
+			p2: "Grant Competition of the Alexander Gorchakov Public Diplomacy Fund for foreign participants of the Forum",
+			img2: `support-2`
+		})
+		+sOrganizers({
+			title: 'Forum organizers ',
+			image1:'org-en-1.svg', 
+			image2:'org-2.svg', 
+			image3:'org-3.png' 
+
+		})
+		+sForm({
+			name:'Your name',
+			tel:'Phone number',
+			email:'Your e-mail',
+			text:'Your question',
+			btn:'Send',
+			policy: `I agree to the Terms of 
+<a href="#"> processing of my personal data.</a>`
+		})
+			h2 Feedback form
+			.h4 Still have some questions? Ask them and we will respond ASAP
+		//- +sContact()
+		+footer()
+			+e.copy.col-auto © 2021. The International Youth Forum Eurasia Global
+			.col-auto Orenburg,January 9th street, 64
+		+modal({
+			title: "Choose your type of participation",
+			t1:"Forum participant",
+			t2:"Forum volunteer",
+			btn:"Participate",
+			th: "Thank you for contacting us, ",
+			thp: " we will get back to you as soon as possible!",
+		})
+
+
+

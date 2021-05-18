@@ -1,4 +1,4 @@
-mixin mob-mnu()
+mixin mob-mnu(nav)
 	-
 		//- let path = require('path');
 		//- let fs = require('fs');
@@ -13,10 +13,10 @@ mixin mob-mnu()
 			span
 		+e.inner
 		
-			+mnu()
+			+mnu(nav)
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(nav) 
 	// start top-nav
 	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn  " )
 		.container
@@ -26,9 +26,9 @@ mixin top-nav()
 						+logo()
 				
 				.col-auto
-					a.btn.btn-outline-body(href="#") Ru
+					block
 				.col-lg.d-none.d-lg-block
-					+mnu()
+					+mnu(nav)
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

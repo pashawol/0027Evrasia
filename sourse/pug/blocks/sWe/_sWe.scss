@@ -8,9 +8,20 @@
 	.container{
 		position: relative;
 	}
+	.img-text,
+	.img-text-foot{
+		font-family: "TagirCTT", serif;
+		color: $primary;
+		line-height: 0.9;
+	}
+	.img-text-foot{
+
+		@include rfs(237px);
+	}
+	.img-text{
+		@include rfs(293px);
 		@include media-breakpoint-up(md) {
 
-			.img-text{
 				position: absolute;
 				right: 0;
 				top: 0;

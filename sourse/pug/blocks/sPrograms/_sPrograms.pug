@@ -3,16 +3,19 @@ mixin sPrograms(data)
 	+b.SECTION.sPrograms.section#sPrograms&attributes(attributes)
 		.container
 			+b.section-title(class="wow  animate__fadeIn  " )
-				h2 Деловая программа
+				h2= h2
 				
 			ul 
-				li(class="wow  animate__fadeInUp  " )
-					+e.li-inner Партнерства  в&nbsp;образовании  и&nbsp;развитии компетенций.  Новая роль человеческого потенциала.
-				li(class="wow  animate__fadeInUp  " )
-					+e.li-inner Кооперация и предпринимательское молодежное сотрудничество
-				li(class="wow  animate__fadeInUp  " )
-					+e.li-inner От&nbsp;осознанного потребления  к&nbsp;устойчивому  развитию. Задачи  и&nbsp;вызовы для молодежи, которая строит мир для  себя&nbsp;и&nbsp;своих  потомков
-				li(class="wow  animate__fadeInUp  " )
-					+e.li-inner Голос молодежи&nbsp;&mdash; современные  медиа и&nbsp;способы коммуникации
-			a.btn.btn-outline-body(href="#modal-reg" class="wow  animate__fadeInUp  " ).link-modal-js  Зарегистрироватьcя
+				each li in data.list
+					li(class="wow  animate__fadeInUp  " )
+						+e.li-inner!= li
+				//- li(class="wow  animate__fadeInUp  " )
+				//- 	+e.li-inner Партнерства  в&nbsp;образовании  и&nbsp;развитии компетенций.  Новая&nbsp;роль человеческого потенциала.
+				//- li(class="wow  animate__fadeInUp  " )
+				//- 	+e.li-inner Кооперация и предпринимательское молодежное сотрудничество
+				//- li(class="wow  animate__fadeInUp  " )
+				//- 	+e.li-inner От&nbsp;осознанного потребления  к&nbsp;устойчивому  развитию. Задачи  и&nbsp;вызовы для молодежи, которая строит мир для  себя&nbsp;и&nbsp;своих  потомков
+				//- li(class="wow  animate__fadeInUp  " )
+				//- 	+e.li-inner Голос молодежи&nbsp;&mdash; современные  медиа и&nbsp;способы коммуникации
+			a.btn.btn-outline-body(href="#modal-reg" class="wow  animate__fadeInUp  " ).link-modal-js= data.btn
 	// end sPrograms

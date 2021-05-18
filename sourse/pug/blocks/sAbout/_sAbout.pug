@@ -14,9 +14,9 @@ mixin sAbout(data)
 							+e.caption
 								+e.title!= t
 								+e.text!= p
-				+item(`1`,`Встречаемся  лично`,`Оффлайн форум`)(class="wow  animate__fadeInLeft  " )
-				+item(`2`,`Транслируем в&nbsp;мир`,`Онлайн трансляции`)(class="wow  animate__fadeInRight  " )
-			p(class="wow  animate__fadeInUp  " ) &laquo;Евразия Global&raquo;&nbsp;&mdash; площадка практико- ориентированного #[span диалога] молодежи России  и&nbsp;иностранных государств. Форум проводится  в&nbsp;#[span 6&nbsp;раз] и&nbsp;за&nbsp;всю свою историю объединил более  #[span 4000 молодых людей] со&nbsp;всего мира!
+				+item(`1`,data.title1, data.text1)(class="wow  animate__fadeInLeft  " )
+				+item(`2`,data.title2, data.text2)(class="wow  animate__fadeInRight  " )
+			p(class="wow  animate__fadeInUp  " )!= data.text
 			
 				
 	// end sAbout

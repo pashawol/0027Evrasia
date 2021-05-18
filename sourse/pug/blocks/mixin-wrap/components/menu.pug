@@ -1,16 +1,9 @@
 //- WP menu
-mixin mnu()
-	-
-		var nav= { 
-			"Что такое Евразия":"#sAbout",
-			"Участникам":"#sMembers",
-			"Связаться с нами":"#sForm",
-			}
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each linkPatch, linkName in nav
-			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
-		block
-
+mixin mnu(nav)
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement") 
+		li.menu-item: a(href="#sAbout" )= nav.link1
+		li.menu-item: a(href="#sMembers" )= nav.link2
+		li.menu-item: a(href="#sForm" )= nav.link3
 //- menu
 //- /WP menu
 

@@ -3,12 +3,12 @@ mixin sOrganizers(data)
 	+b.SECTION.sOrganizers.section#sOrganizers&attributes(attributes)
 		.container
 			+b.section-title(class="wow  animate__fadeIn  " )
-				h2 Организаторы форума
-			.row
+				h2= data.title
+			.row 
 				.col-auto(class="wow  animate__fadeInUp" )
-					a(href="https://myrosmol.ru/" target="_blank"): img.res-i(src="img/svg/org-1.svg"  loading="lazy", alt="")
+					a(href="https://myrosmol.ru/" target="_blank"): img.res-i(src=`img/svg/${data.image1}`  loading="lazy", alt="")
 				.col-auto(class="wow  animate__fadeInUp" )
-					a(href="https://orenburg-gov.ru/" target="_blank"): img.res-i(src="img/svg/org-2.svg"  loading="lazy", alt="")
+					a(href="https://orenburg-gov.ru/" target="_blank"): img.res-i(src=`img/svg/${data.image2}`  loading="lazy", alt="")
 				.col-auto(class="wow  animate__fadeInUp" )
-					a(href=" http://www.rscenter.ru/" target="_blank"): img.res-i(src="img/svg/org-3.svg"  loading="lazy", alt="")
+					a(href=" http://www.rscenter.ru/" target="_blank"): img.res-i(src=`img/svg/${data.image3}`  loading="lazy", alt="")
 	// end sOrganizers

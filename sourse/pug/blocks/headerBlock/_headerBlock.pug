@@ -1,13 +1,13 @@
-mixin headerBlock()
+mixin headerBlock(data)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.H1.title(class="wow  animate__fadeInLeft  " ) Международный 	 молодежный форум	 Евразия Global
-			+e.col--small.col-auto(class="wow  animate__fadeInRight  ") Форум, который объединяет молодежь со&nbsp;всего мира. Говорим на&nbsp;двух языках: русском и&nbsp;английском
+			+e.H1.title(class="wow  animate__fadeInLeft  " )!= data.title
+			+e.col--small(class="wow  animate__fadeInRight  ")!= data.text
 			+e.body.row.text-center
 				.col-sm-auto
-					+e.btn(href="#modal-reg" class="wow  animate__fadeInRight  " ).link-modal-js Зарегистрироваться
-				.h4.col-sm-auto(class="wow  animate__fadeInRight  " ) 2 — 8 сентября, Оренбург
+					+e.btn(href="#modal-reg" class="wow  animate__fadeInRight  " ).link-modal-js= data.btn
+				.h4.col-sm-auto(class="wow  animate__fadeInRight  " )!= data.dat
 		
 		+e.img-wrap.d-none.d-xl-block
 			img.img-after(src="img/@2x/webp/about-img.webp", alt=""  class="wow  animate__fadeIn  " ).d-none.d-md-block
