@@ -12,6 +12,7 @@ mixin sParticipation(data)
 			+e.text2!= data.text2
 			if data.ol
 				ol
+					li!= data.li1
 					each li in data.ol
 						li!= li
 				+e.btn(href="#modal-reg" class="wow  animate__fadeInRight  " ).link-modal-js!= data.btnReg2

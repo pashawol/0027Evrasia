@@ -8,10 +8,11 @@ mixin modal(data)
 			.col
 				+e.text!= data.text1
 			.col-auto
-				+e.btn-primary(href="https://myrosmol.ru/auth/registration/simple")= data.btnReg
+				+e.btn-primary(href="https://myrosmol.ru/auth/registration/simple")!= data.btnReg
 		+e.text2!= data.text2
 		if data.ol
 			ol
+				li!= data.li1
 				each li in data.ol
 					li!= li
 		.row
