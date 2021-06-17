@@ -1,0 +1,57 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sWe/_sWe.pug
+include ../blocks/s2021/_s2021.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sPrograms/_sPrograms.pug
+include ../blocks/sPlatforms/_sPlatforms.pug
+include ../blocks/sSupport/_sSupport.pug
+include ../blocks/sOrganizers/_sOrganizers.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	- let 
+
+block title
+	- let  title= 'Евразия Global'
+	title= title
+	meta(name="description", content="")
+	-
+		let nav = { 
+			link1: "Что такое Евразия",
+			link2: "Участникам",
+			link3: "Связаться с нами",
+			}
+block pagecontent
+	+mob-mnu(nav)
+	.bg-primary
+		header.header
+			+top-nav(nav)
+				a.btn.btn-outline-body(href="en.html") Eng
+		+headerBlock-welcome({
+			title: 'Международный молодежный форум Евразия Global',
+			text: desc,
+			btn:` Отправить`,
+			dat:` 2 — 8 сентября, Оренбург`,
+			text: `Форум, который объединяет молодежь  со&nbsp;всего мира. Говорим на&nbsp;двух языках: русском и&nbsp;английском`
+		})
+ 
+		+footer()
+			+e.copy.col-auto © 2021. Международный молодежный форум «Евразия Global»
+			.col-auto г.Оренбург ул. Девятого января 64
+		+modal({
+			title: "Выберите тип участия ",
+			t1:"Участник  форума",
+			t2:"Волонтер форума",
+			btn:"Зарегистрироваться",
+			th: "Спасибо за вопрос, ",
+			thp: "вернемся с ответом в ближайшее время!",
+		})
+
+
+

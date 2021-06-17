@@ -11,6 +11,7 @@ include ../blocks/sPrograms/_sPrograms.pug
 include ../blocks/sPlatforms/_sPlatforms.pug
 include ../blocks/sSupport/_sSupport.pug
 include ../blocks/sOrganizers/_sOrganizers.pug
+include ../blocks/sParticipation/_sParticipation.pug
 
 block variables
 	- let  mainPage= null 
@@ -27,6 +28,18 @@ block title
 			link2: "Участникам",
 			link3: "Связаться с нами",
 			}
+	-
+		let part = {
+			text1: `Перед тем как зарегистрироваться на&nbsp;сам форум тебе необходимо для начала зарегистрироваться в&nbsp;АИС &laquo;Молодежь России&raquo;`,
+			text2: `Если ты&nbsp;уже зарегистрирован в&nbsp;АИС &laquo;Молодежь России&raquo;&nbsp;&mdash; изучи инструкцию и&nbsp;регистрируйся на&nbsp;форум.`,
+			ol: [ 
+					`После успешной регистрации на&nbsp;платформе переходи к&nbsp;регистрации на&nbsp;форум. Выбери вариант участия и&nbsp;авторизуйся при помощи тех&nbsp;же данных, которые вводил в&nbsp;АИС &laquo;Молодежь России&raquo;`,
+					`Переходи во&nbsp;вкладку &laquo;Мероприятие&raquo;, там ты&nbsp;найдешь форум Евразия Global (регистрация участников)`,
+					`Под описанием мероприятия ты&nbsp;найдешь кнопку &laquo;Регистрация иностранных участников&raquo;. Переходи и&nbsp;заполняй все поля. Рассказывай все честно и&nbsp;объемно.`,
+					`Нажимай кнопку &laquo;Подать заявку&raquo; и&nbsp;жди письма, с&nbsp;тобой свяжутся организаторы форума Евразия Global после завершения заявочной кампании.`, 
+			],
+			btnReg: `Зарегистрироваться <br> в АИС «Молодежь России» `
+		}
 block pagecontent
 	+mob-mnu(nav)
 	.bg-primary
@@ -74,6 +87,14 @@ block pagecontent
 				li Российские и&nbsp;иностранные молодые специалисты, и&nbsp;профессионалы, осуществляющие свою деятельность в&nbsp;сфере международного молодежного сотрудничества. 
 
 				li Молодые люди, имеющие идею проекта или готовый проект с&nbsp;прицелом на&nbsp;международное сотрудничество.
+		+sParticipation({
+			h2: 'Как принять участие',
+			text1: part.text1,
+			text2: part.text2,
+			ol: part.ol,
+			btnReg: part.btnReg,
+			btnReg2: `Зарегистрироватьcя <br> на форум Eurasia Global`,
+		})
 		+sPrograms({
 			h2: `Деловая программа`,
 			btn: `Зарегистрироватьcя`,
@@ -107,7 +128,7 @@ block pagecontent
 
 			.col-sm.order-md-last(class="wow  animate__fadeInRight  " )
 				p 
-					span Росийско-Сербский молодежный  диалог
+					span Российско-Сербский молодежный  диалог
 				p 
 					span Год  креативной  экономики
 				p 
@@ -132,7 +153,7 @@ block pagecontent
 			email:'E-mail',
 			text:'Ваш вопрос',
 			btn:'Отправить',
-			policy: `Соглашаюсь с&nbsp;условиями  <a href="#"> обработки персональных данны </a>`
+			policy: `Соглашаюсь с&nbsp;условиями  <a href="#"> обработки персональных данных </a>`
 		})
 			h2 Остались вопросы?
 			.h4 Задайте их&nbsp;нам и&nbsp;мы&nbsp;ответим Вам в&nbsp;кратчайшие сроки
@@ -140,6 +161,8 @@ block pagecontent
 		+footer()
 			+e.copy.col-auto © 2021. Международный молодежный форум «Евразия Global»
 			.col-auto г.Оренбург ул. Девятого января 64
+
+		
 		+modal({
 			title: "Выберите тип участия ",
 			t1:"Участник  форума",
@@ -147,7 +170,13 @@ block pagecontent
 			btn:"Зарегистрироваться",
 			th: "Спасибо за вопрос, ",
 			thp: "вернемся с ответом в ближайшее время!",
+			text1: part.text1,
+			text2: part.text2,
+			ol: part.ol,
+			btnReg: part.btnReg,
 		})
+
+
 
 
 

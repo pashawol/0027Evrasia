@@ -5,6 +5,16 @@ mixin modal(data)
 	+b.modal-win--reg(id="modal-reg" class=" " style="display: none" )
 		.h2.fw-600.text-white= data.title
 		.row
+			.col
+				+e.text!= data.text1
+			.col-auto
+				+e.btn-primary(href="https://myrosmol.ru/auth/registration/simple")= data.btnReg
+		+e.text2!= data.text2
+		if data.ol
+			ol
+				each li in data.ol
+					li!= li
+		.row
 			.col-lg-6 
 				+e.card(href="https://grants.myrosmol.ru/events/96f7f736-8a50-4a99-88fc-ada1b00b4b38")
 					+e.DIV.title= data.t1

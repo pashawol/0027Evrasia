@@ -1,0 +1,18 @@
+mixin sParticipation(data)
+	// start sParticipation
+	+b.SECTION.sParticipation.section#sParticipation&attributes(attributes)
+		.container
+			+b.section-title
+				h2= data.h2 
+			.row.mb-5.align-items-center
+				.col
+					+e.text!= data.text1
+				.col-auto
+					+e.btn(href="https://myrosmol.ru/auth/registration/simple")!= data.btnReg
+			+e.text2!= data.text2
+			if data.ol
+				ol
+					each li in data.ol
+						li!= li
+				+e.btn(href="#modal-reg" class="wow  animate__fadeInRight  " ).link-modal-js!= data.btnReg2
+	// end sParticipation

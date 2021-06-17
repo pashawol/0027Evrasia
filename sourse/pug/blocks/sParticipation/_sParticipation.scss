@@ -1,0 +1,77 @@
+// start .sParticipation
+.sParticipation {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__text,
+		&__text2 { 
+			font-size: rem(32);
+			font-weight: 500;
+			margin-bottom: 25px;
+		}
+
+		&__text2 {
+			// font-weight: bold;
+				margin-bottom: rem(50);
+		}
+
+		ol { 
+			@extend .row;
+			counter-reset: num;
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				position: relative;
+				z-index: 2;
+				// font-size: re;
+				font-weight: 500;
+				margin-bottom: rem(50);
+				&::before {
+					content: counter(num);
+					counter-increment: num;
+					width: rem(45);
+					height: rem(45);
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-weight: bold;
+					font-size: rem(20);
+					border: 1px solid #000000;
+					margin-bottom: rem(30);
+					line-height: 1;
+				}
+				&::after{
+					content: url(../img/svg/marker.svg);
+					position: absolute;
+					top: -10px;
+					left: -20px;
+					z-index: -1;
+				}
+
+				@extend .col-lg-3;
+				@extend .col-sm-6;
+
+			}
+		}
+
+		&__btn  {
+			@extend .btn;
+			@extend .btn-outline-body;
+			// width: 480px;
+			// font-size: 16px !important;
+			// height: 56px;
+			
+			padding: rem(20) rem(60);
+			margin-bottom: 15px;
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sParticipation

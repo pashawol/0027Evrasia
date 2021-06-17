@@ -10,5 +10,24 @@ mixin headerBlock(data)
 				.h4.col-sm-auto(class="wow  animate__fadeInRight  " )!= data.dat
 		
 		+e.img-wrap.d-none.d-xl-block
-			img.img-after(src="img/@2x/webp/about-img.webp", alt=""  class="wow  animate__fadeIn  " ).d-none.d-md-block
+			+pic('about-img.png','','','')(class="wow  animate__fadeIn  " ).d-none.d-md-block
+			//- img.img-after(src="img/@2x/webp/about-img.webp", alt=""  ).
+	// end headerBlock
+mixin headerBlock-welcome(data)
+	// start headerBlock
+	+b.headerBlock--form.section#headerBlock&attributes(attributes)
+		.container
+			+e.H1.title(class="wow  animate__fadeInLeft  " )!= data.title
+			.h4.col-sm-auto(class="wow  animate__fadeInRight  " )!= data.dat
+			+e.title-sub Подать заявку
+			+form-wrap
+				+input('Ваше имя','text','','name')(required)
+				+input('Номер телефона','tel','','tel')(required)
+				+input('E-mail','email','','email')(required)
+				+e.btn(type="submit" class="wow  animate__fadeInRight  " )= data.btn
+				+in-c()(checked)
+					+e.SPAN.text.form-check-label Я даю свое согласие на #[a(href="#" target="_blank") обработку персональных] данных, а также подтверждаю, что ознакомлен со всеми пунктами #[a(href="#" target="_blank") пользовательского соглашения] и, безусловно, принимаю их
+		+e.img-wrap--form.d-none.d-xl-block
+			+pic('head-form.png','','','')(class="wow  animate__fadeIn  " ).d-none.d-md-block
+			//- img.img-after(src="img/@2x/webp/about-img.webp", alt=""  ).
 	// end headerBlock

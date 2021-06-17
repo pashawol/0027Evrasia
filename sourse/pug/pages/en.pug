@@ -11,6 +11,7 @@ include ../blocks/sPrograms/_sPrograms.pug
 include ../blocks/sPlatforms/_sPlatforms.pug
 include ../blocks/sSupport/_sSupport.pug
 include ../blocks/sOrganizers/_sOrganizers.pug
+include ../blocks/sParticipation/_sParticipation.pug
 
 block variables
 	- let  mainPage= null 
@@ -28,6 +29,17 @@ block title
 			link2: "Participants",
 			link3: "Contact us",
 			}
+		let part = {
+			text1: `Ready to become part of a large-scale international youth event for young people?`,
+			text2: `Then devote some time, stay focused and follow this simple instruction.`,
+			ol: [ 
+					`After the successful registration on the platform visit the site:  grants.myrosmol.ru. <br> Login using the same data you’ve entered before in AIS “Russian Youth”.`,
+					` Click on the "Events’" tab, where you will find the forum “Eurasia Global” (Registration for the participants).`,
+					`Under the description of the event, you will find the button "Registration of foreign participants". Go ahead and fill in all the gaps. Tell everything honestly and in details.`,
+					`Press the "Apply" button and wait for the letter, the organizers of the forum “Eurasia Global” will contact you after the end of the application campaign`, 
+			],
+			btnReg: `Зарегистрироваться <br> в АИС «Молодежь России» `
+		}
 block pagecontent
 	+mob-mnu(nav)
 	.bg-primary
@@ -75,6 +87,16 @@ block pagecontent
 				li Russian and foreign young specialists and professionals, working in the field of international youth cooperation.  
 
 				li Young people with a project idea or a completed project aimed at international cooperation
+
+		+sParticipation({
+			h2: 'Как принять участие',
+			text1: part.text1,
+			text2: part.text2,
+			ol: part.ol,
+			btnReg: part.btnReg,
+			btnReg2: `Зарегистрироватьcя <br> на форум Eurasia Global`,
+		})
+
 		+sPrograms({
 			h2: `Business programme`,
 			btn: ` Participate`,
@@ -151,6 +173,10 @@ block pagecontent
 			btn:"Participate",
 			th: "Thank you for contacting us, ",
 			thp: " we will get back to you as soon as possible!",
+			text1: part.text1,
+			text2: part.text2,
+			ol: part.ol,
+			btnReg: part.btnReg,
 		})
 
 
