@@ -5,16 +5,46 @@ mixin sForm(data)
 			+b.section-title(class="wow  animate__fadeInLeft  " )
 				block
 			
-			+form-wrap
-				.row(class="wow  animate__fadeInRight  " )
-					.col-lg-5
-						+input(data.name,'text','', 'name')
-						+input(data.tel,'tel')
-						+input(data.email,'email')
-					.col-lg-7.mb-4
-						+input(data.text,'textarea')
-					.col-lg-5.mb-4
-						button.btn.btn-outline-body.w-100(type="submit")= data.btn
-					.col.align-self-center.mb-4
-						+e.polite!= data.policy
+			//- +form-wrap
+			//- 	.row(class="wow  animate__fadeInRight  " )
+			//- 		.col-lg-5
+			//- 			+input(data.name,'text','', 'name')
+			//- 			+input(data.tel,'tel')
+			//- 			+input(data.email,'email')
+			//- 		.col-lg-7.mb-4
+			//- 			+input(data.text,'textarea')
+			//- 		.col-lg-5.mb-4
+			//- 			button.btn.btn-outline-body.w-100(type="submit")= data.btn
+			//- 		.col.align-self-center.mb-4
+			//- 			+e.polite!= data.policy
+			.row
+				mixin item(t, m)
+					.col-xl-4.col-md-6(class="wow  animate__fadeInUp  " )
+						+e.item
+							+e.title!= t
+							+e.tels
+								block
+							
+							+e.email(href=`mailto:${m}`)
+								+icon("mail")
+								= m
+				+item(data.t1,`eurasiaglobal@fadm.gov.ru`)
+					+e.tel(href=`tel:+79684901543`) 
+						+icon("tel")
+						| +7 968 490 15 43
+					+e.tel(href=`tel:+79684901544`) 
+						+icon("tel")
+						| +7 968 490 15 44
+
+				+item(data.t2,`orlfadm@yandex.ru`)
+					+e.tel(href=`tel:+79684901541`) 
+						+icon("tel")
+						| +7 968 490 15 41
+					+e.tel(href=`tel:+79684901542`) 
+						+icon("tel")
+						| +7 968 490 15 42 
+				+item(data.t3,`vol.eurasia@gmail.com`)
+					+e.tel(href=`tel:+79684901543`) 
+						+icon("tel")
+						| +7 968 490 15 43
 	// end sForm
