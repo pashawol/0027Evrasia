@@ -15,6 +15,7 @@
     "@tigersway/gulp-responsive": "^1.5.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
+    "babel-plugin-import": "^1.13.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-root-import": "^6.6.0",
     "bootstrap": "^5.0.0",
@@ -56,13 +57,14 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^4.1.1",
+    "element-plus": "^1.0.2-beta.62",
+    "gsap": "^3.6.1",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
-    "gsap": "^3.6.1",
     "scrollmagic": "^2.0.8",
     "swiper": "^6.5.9",
-    "animate.css": "^4.1.1",
     "wowjs": "^1.1.3"
   }
 }
