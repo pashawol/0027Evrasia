@@ -24,7 +24,9 @@ html{
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 	// margin-right: calc(-1 * (100vw - 100%));
 }
-
+.fw-400{
+	font-weight: 400 !important;
+}
 body {
 	&.fixed,
 	&.fancybox-active{

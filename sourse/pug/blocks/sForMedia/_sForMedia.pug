@@ -5,11 +5,17 @@ mixin sForMedia(data)
 			+b.section-title
 				h2= data.h2
 			!= data.headText
+			h4.strong!= data.h40
+			ul
+				- let lists0 = data.list0
+				each item in lists0
+					li!= item
 			h4.strong!= data.h4
 			ul
 				- let lists = data.list
 				each item in lists
 					li!= item
+			!= data.bodyText
 			h4.strong!= data.h41
 			.row
 				mixin item(i,p, t,tel)
@@ -21,18 +27,21 @@ mixin sForMedia(data)
 								.small= p
 								.h4.strong.mb-1= t
 								//- - let t = tel.trim()
-								a.text-body.h6(href=`tel:${tel.trim()}`)= tel
+								a.text-body.h6(href=`tel:${tel.replace(/\s/g, '')}`)= tel
 				+item('girl-1.png',data.p1, data.t1, `+7 (915) 155-67-78`)
 				+item('girl-2.jpg',data.p2, data.t2, `+7 (926) 278-32-93`)
 			+e.email-block= data.emText
 				a(href="mailto:eurasiayouthforum@gmail.com") eurasiayouthforum@gmail.com
-			.row
+				br
+				!= data.emText2
+			//- if data.items
+			//- 	.row
 
-				each item2 in data.items
-					+e.col.col-lg-6
-						+e.item
-							.h4!= item2.title
-							p!= item2.text1
-							p!= item2.text2
+			//- 		each item2 in data.items
+			//- 			+e.col.col-lg-6
+			//- 				+e.item
+			//- 					.h4!= item2.title
+			//- 					p!= item2.text1
+			//- 					p!= item2.text2
 				
 	// end sForMedia

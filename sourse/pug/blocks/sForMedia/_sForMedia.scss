@@ -26,9 +26,19 @@
 				border-color: transparent;
 			}
 		}
+		&.strong{
+			font-weight: bold !important;
+		}
 	}
 	h4{
 		margin-bottom: 1em;
+	}
+
+	li{
+		a{
+			@extend .text-body;
+			// @extend .text-body;
+		}
 	}
 	li{
 		display: inline-block;
