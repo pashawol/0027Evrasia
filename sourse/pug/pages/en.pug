@@ -12,6 +12,7 @@ include ../blocks/sPlatforms/_sPlatforms.pug
 include ../blocks/sSupport/_sSupport.pug
 include ../blocks/sOrganizers/_sOrganizers.pug
 include ../blocks/sParticipation/_sParticipation.pug
+include ../blocks/sForMedia/_sForMedia.pug
 
 block variables
 	- let  mainPage= null 
@@ -143,6 +144,95 @@ block pagecontent
 			p2: "Grant Competition of the Alexander Gorchakov Public Diplomacy Fund for foreign participants of the Forum",
 			img2: `support-2`
 		})
+
+		+sForMedia({
+			h2:'Media Info',
+			headText: `
+			
+			<div class="h3 strong "> Rules for media representatives at&nbsp;the International Youth Forum Eurasia Global in&nbsp;2021</div>
+
+			<div class="h3 fw-400 ">Due to&nbsp;the special epidemiological situation in&nbsp;the Russian Federation, and according to&nbsp;the recommendations of&nbsp;Rospotrebnadzor, we&nbsp;ask you to&nbsp;follow simple rules: wear masks on&nbsp;the territory of&nbsp;the Forum, as&nbsp;well as&nbsp;observe a&nbsp;1.5 meters distance.</div>
+
+			<div class="h3 fw-400">Besides, temperature control will be&nbsp;conducted as&nbsp;a&nbsp;measure to&nbsp;prevent the spread of&nbsp;coronavirus.</div>
+
+			<div class="h3 fw-400">In&nbsp;case you do&nbsp;not attend the Forum, the press service is&nbsp;ready to&nbsp;provide all the necessary information in&nbsp;electronic form (photos, videos, press releases, post-releases), for this you need to&nbsp;send a&nbsp;request&nbsp;to <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>. </div>
+
+
+			<div class="h3 fw-400">When staying on&nbsp;the territory of&nbsp;the forum, it&nbsp;is&nbsp;necessary to&nbsp;observe  <a href="https://www.rospotrebnadzor.ru/about/info/news_time/news_details.php?ELEMENT_ID=13566" target="_blank">preventive measures</a>  and adhere to&nbsp;all the rules of&nbsp;the Forum.</div>
+			<br>
+			<br>
+				<div class="h3 strong ">Media accreditation </div>
+				<div class="h3 fw-400">To&nbsp;work at&nbsp;the International Youth Forum Eurasia Global, you must be&nbsp;accredited by&nbsp;the Forum&rsquo;s press service.</div>
+			<div class="h3 fw-400">To&nbsp;participate in&nbsp;the event, media representatives (or&nbsp;their editorial offices) need to&nbsp; <a href="https://disk.yandex.ru/i/IZUoPto_IkwziQ" >download the form</a>, fill it&nbsp;out and send it&nbsp;to&nbsp; <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>. The form must be&nbsp;filled out for each media representative and employee present on&nbsp;the territory (including technical staff, drivers, assistants).</div>
+			
+			`, 
+			h40:`IMPORTANT INFORMATION:`,
+			list0: [
+				`<strong>24&nbsp;hours before arrival at&nbsp;the Forum, in&nbsp;addition to&nbsp;accreditation, please, send to&nbsp; <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a> a&nbsp;certificate of&nbsp;vaccination from COVID-19&nbsp;or the result of&nbsp;the PCR test. In&nbsp;the absence of&nbsp;medical data, the Forum&rsquo;s media service has the right to&nbsp;refuse accreditation and not allow access to&nbsp;the site.</strong>`,
+				`<span class="tdu">On&nbsp;the day of&nbsp;visiting the Forum, it&nbsp;is&nbsp;necessary to&nbsp;have with you:</span> <br>
+				<strong>&mdash;&nbsp;An&nbsp;identity document; 
+				<br>
+				&mdash;&nbsp;A&nbsp;certificate of&nbsp;vaccination from COVID-19&nbsp;or the result of&nbsp;a&nbsp;PCR test made no&nbsp;later than 72&nbsp;hours before arriving at&nbsp;the Forum site.</strong>`,
+				`<strong>Without accreditation and medical data (vaccination certificate/ PCR test) the entrance to&nbsp;the forum territory is&nbsp;prohibited. Accreditation is&nbsp;carried out no&nbsp;later than 24&nbsp;hours before arrival at&nbsp;the forum.</strong>
+				<span class="tdu">The Forum administration reserves the right to&nbsp;refuse accreditation to&nbsp;media representatives over the age of&nbsp;65&nbsp;in&nbsp;order not to&nbsp;expose them to&nbsp;the risks associated with COVID-19.</span>`,
+				
+				`&mdash;&nbsp;All questions re&nbsp;accreditation can be&nbsp;sent&nbsp;to <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>.`
+				],
+			h4:`To obtain accreditation: `,
+			list: [
+				`Russian journalists must have a&nbsp;press card and be&nbsp;on&nbsp;the staff of&nbsp;a&nbsp;media registered with Roskomnadzor;`,
+				`Foreign journalists must have accreditation with the Ministry of&nbsp;Foreign Affairs of&nbsp;the Russian Federation.`,
+				`Press service staff inform accredited journalists on&nbsp;their accreditation;`,
+				`The work of&nbsp;media representatives on&nbsp;the site is&nbsp;to&nbsp;be&nbsp;agreed in&nbsp;advance and confirmed by&nbsp;the Forum&rsquo;s press service;`,
+				`Media representatives on&nbsp;the site are accompanied by&nbsp;the press service of&nbsp;the Forum. The media service of&nbsp;the Forum is&nbsp;entitled to&nbsp;refuse the media to&nbsp;grant accreditation to&nbsp;its journalists without explaining the reason.`
+				],
+			bodyText: `
+				<div class="h3 strong ">The forum&rsquo;s media service shares useful resources with you:  &mdash;&nbsp;photos are available in&nbsp;our <a href="https://vk.com/terrascientiaforum" target="_blank"> social networks.</a></div>
+			`,
+			h41:`Contact information for media representatives<br> <span class="fw-400">You can always call&nbsp;us:
+			</span>`,
+			t1:`Anastasia Kandrakhina`,
+			p1:`Media Specialist`,
+			t2:`Anastasia Potychkina `,
+			p2:`Head of the Forum's Press service `,
+			emText:`Or write to:   `,
+			emText2:`We&nbsp;will be&nbsp;happy to&nbsp;answer all your questions and guide you! `,
+			items:[
+				{
+					title:`Подписка на обновления сайта Международного молодежного форума «Евразия Global»`,
+					text1:`Вы можете подписаться на ежедневную тематическую рассылку, отправив запрос на эл.адрес: <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>`,
+					text2:`Для включения в базу рассылки необходимо направить запрос на электронную почту, указав в теле письма название СМИ, регион, сайт издания, имя представителя СМИ, его сотовый телефон, а также должность отправителя запроса и адрес почты для рассылки. В теме письма указать: «Запрос на рассылку».` },
+				{
+					title:`Использование фотоматериалов пресс-службы форума`,
+					text1:`Банк фотографий высокого разрешения доступен по отдельному запросу на адрес: <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>`,
+					text2:`В теме письма указать: «Запрос на фото».
+Фотоматериалы форума также обновляются в ежедневном формате и доступны на сайте forumeurasia.ru`,
+					
+
+				},
+				{
+					title:`Запрос на предоставление информации о делегациях регионов`,
+					text1:`Представители региональных телеканалов могут направить запрос в пресс-службу форума на электронную почту <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a> о предоставлении видеоматериалов о делегации города или региона для включения материала в ротацию новостных выпусков.`,
+					text2:`Срок и техническое задание предоставления материалов оговаривается по каждому запросу отдельно.
+					В теме письма указать «Запрос видеоматериала».
+					Требования к телеканалам: наличие официального свидетельства о регистрации СМИ.`,
+				},
+				
+
+
+				{
+					title:`Запрос на комментарий спикера форума`,
+					text1:`Запрос на предоставление комментария спикера форума направляется на электронную почту <a href="mailto:eurasiayouthforum@gmail.com">eurasiayouthforum@gmail.com</a>.`,
+					text2:`В теле письма указывается название СМИ, регион, сайт СМИ, имя спикера, тематика готовящегося материала, сам вопрос, а также имя, мобильный телефон и должность отправителя запроса. В теме письма указать «Запрос комментария спикера»`,
+
+					
+
+
+				},
+			]
+		})
+
+
 		+sOrganizers({
 			title: 'Forum organizers ',
 			image1:'org-en-1.svg', 
